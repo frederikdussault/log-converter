@@ -1,0 +1,26 @@
+{
+  "name": "log_converter",
+  "version": "1.0.0",
+  "description": "Convert Apache logfile",
+  "main": "convert.js",
+  "dependencies": {
+    "mysql": "^2.12"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/frederikdussault/log-converter.git"
+  },
+  "keywords": [
+    "log"
+  ],
+  "author": "Frederik Dussault",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/frederikdussault/log-converter/issues"
+  },
+  "homepage": "https://github.com/frederikdussault/log-converter#readme"
+}

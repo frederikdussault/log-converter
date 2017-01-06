@@ -8,12 +8,12 @@ usage:
 node convert.js FILTER < inputfilename > outputfilename
 
 Parameters
-FILTER : [,,,,,"4..",]  Represent every fields in logfile. Use strings for criteria
+FILTER : ,,,,,"4..",  Represent every fields in logfile. Use strings for criteria.  This example filter all lines with http code 400
 */
 
 console.time('run')
 
-var filter = [,,,,,"4..",]
+var filter = [,,,,,,,,]
 var sRegex = /^(\S+)\s+(\S+)\s+(\S+)\s+\[(.*)\]\s+\"(.*)\"\s+(\S+)\s+(\S+)\s+\"(.*)\"\s+\"(.*)\"$/
 var sep = ','
 
@@ -23,13 +23,10 @@ if (process.argv[2]) {
 }
 
 var fs = require('fs')
-var liner = require('modules/liner')
-var Logger = require('modules/logger')
+var liner = require('./modules/liner')
 
-// TODO create a contructor that will set the log object filters
-//var codeFilter = {}
-//var logger = new log(codeFilter)
-
+///TODO replace the following with log_exploder and array_to_csv
+var Logger = require('./modules/logger')
 var log = new Logger(sRegex, filter, sep)
 
 /*
