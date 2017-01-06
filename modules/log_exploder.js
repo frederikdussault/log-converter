@@ -5,7 +5,6 @@ var stream = require('stream')
 var log_exploder = function (sRegex, filter = null) {
     this.sRegex = sRegex
     this.filter = filter
-    this.sep = sep
 
     this.strm = new stream.Transform({objectMode: true})
 
