@@ -3,6 +3,12 @@ Goal:
 + Read text file line by line using pipe
 
 input -> upper -> add line number -> output
+
+usage:
+node convert.js FILTER < inputfilename > outputfilename
+
+Parameters
+FILTER : [,,,,,"4..",]  Represent every fields in logfile. Use strings for criteria
 */
 
 console.time('run')
@@ -17,8 +23,8 @@ if (process.argv[2]) {
 }
 
 var fs = require('fs')
-var liner = require('./liner')
-var Logger = require('./logger')
+var liner = require('modules/liner')
+var Logger = require('modules/logger')
 
 // TODO create a contructor that will set the log object filters
 //var codeFilter = {}
